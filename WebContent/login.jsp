@@ -6,7 +6,7 @@
     <title>登录</title>
 </head>
 <body>
-<form action="/callBack" method="post">
+<form action="/WxAuth/callBack" method="post">
     <input type="text" name="account">
     <input type="password" name="password">
     <input type="hidden" name="openid" value="${openid}">

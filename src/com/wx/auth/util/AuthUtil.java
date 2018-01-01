@@ -10,8 +10,11 @@ import org.apache.http.util.EntityUtils;
 
 public class AuthUtil {
 	
-	public static final String APPID = "wx811a35ce636e0234";
-    public static final String APPSECRET = "71ecefb123d08f7097dea02cf2bd05a3";
+//	public static final String APPID = "wx811a35ce636e0234";
+//  public static final String APPSECRET = "71ecefb123d08f7097dea02cf2bd05a3";
+    
+    public static final String APPID = "wx0fd51bf2fc843efb";
+    public static final String APPSECRET = "bb1fd7bba658544573040dc852c96c63";
     
 	public static JSONObject doGetJson(String url) throws IOException {
         JSONObject jsonObject = null;
@@ -21,7 +24,7 @@ public class AuthUtil {
         HttpEntity entity = response.getEntity();               //获取结果
         if(entity != null) {
             String result = EntityUtils.toString(entity, "UTF-8");
-            System.out.println(result);
+//            System.out.println(result);
             jsonObject = JSONObject.fromObject(result);
         }
         httpGet.releaseConnection();   //释放连接

@@ -19,8 +19,7 @@ public class LoginServlet extends HttpServlet {
 
         System.out.println("in /WxAuth/wxLogin");
 
-        String backUrl = "http://localhost:8080/WxAuth/callBack";
-//        String backUrl = "http://atwjsw.s1.natapp.cc/callBack";           //能够在公网上访问(花生壳银映射)
+        String backUrl = "http://wx.com.ngrok.xiaomiqiu.cn/WxAuth/callBack";
 
         String url = "https://open.weixin.qq.com/connect/oauth2/authorize?"
                 + "appid=" + AuthUtil.APPID

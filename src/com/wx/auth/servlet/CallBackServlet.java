@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 @WebServlet("/callBack")
 public class CallBackServlet extends HttpServlet{
 	
-	private String dbUrl = "jdbc:mysql://localhost:3306/auth";
+	private String dbUrl = "jdbc:mysql://localhost:3306/wx_auth";
     private String driverName = "com.mysql.jdbc.Driver";
     private String dbUserName = "root";
     private String dbPassword = "qaz518";
@@ -74,7 +74,7 @@ public class CallBackServlet extends HttpServlet{
 //      req.getRequestDispatcher("/index1.jsp").forward(req, resp);
         
         //2. 将微信与当前的系统账号绑定
-/*        try {
+       try {
             String nickName = getNickName(openid);
             if (!"".equals(nickName)){
                 //已绑定。直接跳转登录成功页面
@@ -120,6 +120,7 @@ public class CallBackServlet extends HttpServlet{
         rs = ps.executeQuery();
         while (rs.next()) {
             nickName = rs.getString("NICKNAME");
+            System.out.println(nickName);
         }
         rs.close();
         ps.close();
@@ -141,9 +142,9 @@ public class CallBackServlet extends HttpServlet{
         conn.close();
         return temp;
     }
-*/
+
  }
-}
+
 
 
 
